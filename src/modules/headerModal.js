@@ -15,7 +15,7 @@ const headerModal = () => {
         overlay.style.display = 'none'
     })
     overlay.addEventListener('click', () => {
-        modal.classList.toggle('header-modal')
+        modal.classList.add('header-modal')
         overlay.style.display = 'none'
     })
 }
