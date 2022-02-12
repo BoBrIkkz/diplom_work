@@ -1880,6 +1880,28 @@ input.error {
     cursor: pointer;
 }
 
+.slider-slide {
+    min-width: 600px;
+}
+
+.slider-line {
+    display: flex!important;
+    position: relative!important;
+    left: 0;
+    transition: all ease 1s;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    max-height: 275px;
+}
+
+@media (max-width: 576px) {
+    .slider-slide {
+        min-width: 555px
+    }
+}
+
 @media (min-width: 576px) {
     .benefits-wrap {
         width: 100%;
