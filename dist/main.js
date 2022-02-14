@@ -27,6 +27,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst calc = (price = 1000) => {\r\n    const check = document.querySelector('title')\r\n    if (check.textContent == ('Остекление балконов и лоджий')) {\r\n        const total = document.getElementById('calc-total')\r\n        const square = document.getElementById('calc-input')\r\n        const material = document.getElementById('calc-type-material')\r\n        const type = document.getElementById('calc-type')\r\n        const calcBlock = document.getElementById('calc')\r\n\r\n        const countCalc = () => {\r\n            const typeValue = +type.options[type.selectedIndex].value\r\n            const materialValue = +material.options[material.selectedIndex].value\r\n            const squareValue = square.value\r\n            let totalValue = 0\r\n\r\n            if (typeValue && materialValue && squareValue) {\r\n                totalValue = price * typeValue * materialValue * squareValue\r\n                total.placeholder = 'Итого: ' + totalValue + ' руб.'\r\n            }\r\n        }\r\n\r\n        calcBlock.addEventListener('input', (e) => {\r\n            if (e.target === type || e.target === material ||\r\n                e.target === square) {\r\n                countCalc()\r\n            }\r\n        })\r\n\r\n    }\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (calc);\r\n// square * value type * value material\n\n//# sourceURL=webpack://okna/./src/modules/calc.js?");
+<<<<<<< HEAD
 
 /***/ }),
 
@@ -37,6 +38,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst documents = () => {\r\n    const docOpen = document.querySelectorAll('.document-overlay')\r\n    const docBig = document.querySelector('.document-original--opened')\r\n    const overlay = document.querySelector('.overlay')\r\n\r\n    docOpen.forEach((e) => {\r\n        e.addEventListener('click', () => {\r\n            docBig.classList.toggle('document-original')\r\n            overlay.style.display = 'block'\r\n        })\r\n    })\r\n    overlay.addEventListener('click', () => {\r\n        docBig.classList.add('document-original')\r\n        overlay.style.display = 'none'\r\n    })\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (documents);\n\n//# sourceURL=webpack://okna/./src/modules/document.js?");
+=======
+>>>>>>> cba92dff4755c8462a6d644616726c8f2a6521ba
 
 /***/ }),
 
