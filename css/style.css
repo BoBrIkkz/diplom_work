@@ -923,11 +923,13 @@ p.services-image_mobile {
 .document-overlay {
     background: url("../images/zoom.png") no-repeat center rgba(79, 104, 110, 0.42);
     position: absolute;
-    width: 100%;
+    width: 70%;
     height: 100%;
+    margin: 0px 50px;
     top: 0;
     left: 0;
     opacity: 0;
+    cursor: pointer;
 }
 
 .document-inner:hover .document-overlay {
@@ -1894,6 +1896,22 @@ input.error {
 .slider-wrapper {
     overflow: hidden;
     max-height: 275px;
+}
+
+.document-original {
+    display: none;
+}
+
+.document-original--opened {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.original-img {
+    max-width: 100%
 }
 
 @media (max-width: 576px) {
