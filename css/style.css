@@ -1813,6 +1813,7 @@ input.error {
 }
 
 .benefits__item {
+    display: none;
     width: 100%;
     max-width: 185px;
 }
@@ -1912,6 +1913,10 @@ input.error {
 
 .original-img {
     max-width: 100%
+}
+
+.benefits__item-active {
+    display: block;
 }
 
 @media (max-width: 576px) {
