@@ -1,11 +1,4 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
+
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
@@ -66,7 +59,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst scroll = () => {\n\n    const scrolllink = document.querySelector('.smooth-scroll');\n    \n    const checkY = () => {\n        if (window.pageYOffset < 800) {\n            scrolllink.style.display = \"none\"\n        } else {\n            scrolllink.style.display = \"block\"\n        }\n        scrolllink.addEventListener('click', () => {\n            window.scrollTo({ top: 0, behavior: \"smooth\" });\n    \n        })\n    }\n    const checkLoad = () => {\n        if(window.pageYOffset < 800) {\n            let timeout = window.setInterval(checkY, 100);\n        }\n       let timeoutLoad = window.setInterval(checkLoad, 100);\n\n    }\n    checkLoad()\n\n    \n\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scroll);\n\n//# sourceURL=webpack://okna/./src/modules/scroll.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst scroll = () => {\n\n    const scrolllink = document.querySelector('.smooth-scroll');\n    \n    const checkY = () => {\n        if (window.pageYOffset < 800) {\n            scrolllink.style.display = \"none\"\n        } else {\n            scrolllink.style.display = \"block\"\n        }\n        scrolllink.addEventListener('click', () => {\n            window.scrollTo({ top: 0, behavior: \"smooth\" });\n    \n        })\n    }\n    const checkLoad = () => {\n        if(window.pageYOffset < 800) {\n            let timeout = window.setInterval(checkY, 1000);\n        }\n       let timeoutLoad = window.setInterval(checkLoad, 1000);\n\n    }\n    checkLoad()\n\n    \n\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scroll);\n\n//# sourceURL=webpack://okna/./src/modules/scroll.js?");
 
 /***/ }),
 
