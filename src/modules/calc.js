@@ -1,4 +1,4 @@
-const calc = (price = 1000) => {
+const calc = () => {
     const check = document.querySelector('title')
     if (check.textContent == ('Остекление балконов и лоджий')) {
         const total = document.getElementById('calc-total')
@@ -14,7 +14,7 @@ const calc = (price = 1000) => {
             let totalValue = 0
 
             if (typeValue && materialValue && squareValue) {
-                totalValue = price * typeValue * materialValue * squareValue
+                totalValue = typeValue * materialValue * squareValue
                 total.placeholder = 'Итого: ' + totalValue + ' руб.'
             }
         }
