@@ -13,7 +13,15 @@ const scroll = () => {
     
         })
     }
-    let timeout = window.setInterval(checkY, 100);
+    const checkLoad = () => {
+        if(window.pageYOffset < 800) {
+            let timeout = window.setInterval(checkY, 100);
+        }
+       let timeoutLoad = window.setInterval(checkLoad, 100);
+
+    }
+    checkLoad()
+
     
 
 }
