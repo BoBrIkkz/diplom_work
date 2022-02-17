@@ -7,6 +7,13 @@ const documents = () => {
         e.addEventListener('click', () => {
             docBig.classList.toggle('document-original')
             overlay.style.display = 'block'
+            
+        })
+        let documentClose = document.querySelector('.document-modal__close')
+        documentClose.addEventListener('click', () => {
+            docBig.classList.add('document-original')
+            overlay.style.display = 'none'
+            
         })
     })
     overlay.addEventListener('click', () => {
