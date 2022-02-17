@@ -1,4 +1,4 @@
-const servicesSlider = () => {
+const slider = () => {
     const sliderLine = document.querySelector('.slider-line')
     const sliderSlide = document.querySelector('.slider-slide')
     let offset = 0
@@ -36,21 +36,29 @@ const servicesSlider = () => {
     const sliderBlock = document.querySelector('.benefits-wrap')
     const slides = document.querySelector('.benefits__item')
     document.querySelector('.benefits__arrow--right').addEventListener('click', () => {
-        console.log(benefitsOffset)
-        if (slides.offsetWidth < 555) {
+        if (window.innerWidth > 576 && slides.offsetWidth < slides.offsetWidth * 3) {
             benefitsOffset = benefitsOffset + slides.offsetWidth;
-            if (benefitsOffset > 555) {
+            if (benefitsOffset > slides.offsetWidth * 3) {
+                benefitsOffset = 0;
+            }
+        } else if (window.innerWidth < 576 && slides.offsetWidth < slides.offsetWidth * 5) {
+            benefitsOffset = benefitsOffset + slides.offsetWidth;
+            if (benefitsOffset > slides.offsetWidth * 5) {
                 benefitsOffset = 0;
             }
         }
         sliderBlock.style.left = -benefitsOffset + 'px'
     })
     document.querySelector('.benefits__arrow--left').addEventListener('click', () => {
-        console.log(benefitsOffset)
-        if (slides.offsetWidth < 555) {
+        if (window.innerWidth > 576 && slides.offsetWidth < slides.offsetWidth * 3) {
             benefitsOffset = benefitsOffset - slides.offsetWidth;
             if (benefitsOffset <= -185) {
-                benefitsOffset = 555;
+                benefitsOffset = slides.offsetWidth * 3;
+            }
+        } else if (window.innerWidth < 576 && slides.offsetWidth < slides.offsetWidth * 5) {
+            benefitsOffset = benefitsOffset - slides.offsetWidth;
+            if (benefitsOffset <= -185) {
+                benefitsOffset = slides.offsetWidth * 5;
             }
         }
         sliderBlock.style.left = -benefitsOffset + 'px'
@@ -58,4 +66,4 @@ const servicesSlider = () => {
 }
 
 
-export default servicesSlider
+export default slider
