@@ -6,7 +6,7 @@ import servicesModal from './modules/servicesModal'
 import calc from './modules/calc'
 import documents from './modules/document'
 import benefitsSlider from './modules/benefitsSlider'
-timer('17 february 2022')
+timer('22 february 2022')
 scroll()
 headerModal()
 servicesSlider()
