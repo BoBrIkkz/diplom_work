@@ -10,7 +10,6 @@ const servicesModal = () => {
             overlay.style.display = 'block'
         })
     })
-
     servicesClose.addEventListener('click', () => {
         servicesModal.classList.toggle('services-modal')
         overlay.style.display = 'none'
